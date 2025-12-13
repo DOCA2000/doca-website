@@ -4,246 +4,133 @@
 <meta charset="UTF-8">
 <title>Dream Overseas Career Architects</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-:root{
-  --saffron:#ff9933;
-  --white:#ffffff;
-  --green:#138808;
-  --dark:#0b1c2d;
-  --blue:#0a3d62;
-}
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-
-body{
-  background:#f5f7fa;
-  color:#222;
-}
-
-/* HEADER */
-header{
-  background:linear-gradient(90deg,var(--saffron),var(--white),var(--green));
-  padding:15px 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-header h1{
-  color:#000;
-  font-size:22px;
-  font-weight:800;
-}
-
-/* HERO */
-.hero{
-  background:linear-gradient(120deg,#0b1c2d,#0a3d62);
-  color:white;
-  padding:80px 20px;
-  text-align:center;
-}
-
-.hero h2{
-  font-size:36px;
-  margin-bottom:15px;
-}
-
-.hero p{
-  max-width:800px;
-  margin:auto;
-  font-size:18px;
-  opacity:.95;
-}
-
-.hero button{
-  margin-top:30px;
-  padding:15px 35px;
-  font-size:18px;
-  background:var(--saffron);
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-/* SECTIONS */
-section{
-  padding:60px 20px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-/* CERTIFIED */
-.cert{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:15px;
-  font-weight:bold;
-}
-
-/* CONTACT */
-.contact{
-  background:#0b1c2d;
-  color:white;
-  text-align:center;
-}
-
-/* FOOTER */
-footer{
-  background:#000;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-}
-
-/* PAYMENT MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.8);
-  align-items:center;
-  justify-content:center;
-  z-index:999;
-}
-
-.modal-box{
-  background:white;
-  padding:25px;
-  max-width:900px;
-  width:95%;
-  border-radius:20px;
-}
-
-.modal-box h3{
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.qr-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  text-align:center;
-}
-
-.qr-grid img{
-  width:100%;
-  max-width:200px;
-}
-
-.close{
-  text-align:center;
-  margin-top:20px;
-}
-
-.close button{
-  padding:10px 25px;
-  background:red;
-  color:white;
-  border:none;
-  border-radius:20px;
-  cursor:pointer;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <h1>Dream Overseas Career Architects</h1>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-area">
+    <img src="images/logo.png" alt="DOCA Logo">
+    <span>Dream Overseas Career Architects</span>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <button onclick="openPayment()">Pay Fee</button>
+  </nav>
 </header>
 
-<div class="hero">
-  <h2>Fly Your Career Beyond Borders ✈️</h2>
-  <p>Trusted overseas education & career consultancy with certified experts, secure process and global success vision.</p>
-  <button onclick="openPayment()">Pay Registration Fee</button>
-</div>
-
-<section>
-  <h2 style="text-align:center;margin-bottom:30px">Why Choose Us</h2>
-  <div class="grid">
-    <div class="card">✈️ Aviation Inspired Career Growth</div>
-    <div class="card">🌍 Global Universities & Countries</div>
-    <div class="card">📑 100% Transparent Documentation</div>
-    <div class="card">🛡️ Secure & Verified Payment System</div>
+<!-- HERO -->
+<section id="home" class="hero">
+  <img src="images/airplane.png" class="plane">
+  <img src="images/eagle.png" class="eagle">
+  <h1>Fly Your Career Beyond Borders</h1>
+  <p>Trusted Overseas Career & Immigration Consultancy</p>
+  <div class="hero-btns">
+    <a href="https://wa.me/918979382308" target="_blank">WhatsApp Us</a>
+    <button onclick="openPayment()">Pay Registration Fee</button>
   </div>
 </section>
 
-<section>
-  <h2 style="text-align:center;margin-bottom:30px">Certified & Trusted</h2>
-  <div class="grid">
-    <div class="card cert">✅ ISO Certified Process</div>
-    <div class="card cert">✅ Data Privacy Protection</div>
-    <div class="card cert">✅ Legal Documentation Support</div>
-    <div class="card cert">✅ Customer Support Verified</div>
+<!-- BRAND STORY -->
+<section id="about" class="section light">
+  <h2>Who We Are</h2>
+  <p class="center">
+    Dream Overseas Career Architects is a professional overseas consultancy
+    focused on building genuine global career opportunities with transparency,
+    verified processes and responsible guidance.
+  </p>
+</section>
+
+<!-- TRUST STATS -->
+<section class="stats">
+  <div><span>1000+</span><p>Candidates Guided</p></div>
+  <div><span>15+</span><p>Countries</p></div>
+  <div><span>95%</span><p>Success Rate</p></div>
+  <div><span>24×7</span><p>Support</p></div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div>✈️ Aviation Jobs</div>
+    <div>🌍 Overseas Employment</div>
+    <div>🛂 Work Visa Assistance</div>
+    <div>📄 Passport Services</div>
+    <div>🎓 Career Guidance</div>
+    <div>📑 Documentation Support</div>
   </div>
 </section>
 
-<section class="contact">
+<!-- PROCESS -->
+<section id="process" class="section light">
+  <h2>Our Process</h2>
+  <div class="timeline">
+    <div>1. Online Registration</div>
+    <div>2. Profile Verification</div>
+    <div>3. Interview Scheduling</div>
+    <div>4. Documentation</div>
+    <div>5. Job Offer & Departure</div>
+  </div>
+</section>
+
+<!-- CERTIFICATION -->
+<section class="section">
+  <h2>Why Trust Us</h2>
+  <div class="cards">
+    <div>✅ Secure Payment System</div>
+    <div>✅ Verified Consultants</div>
+    <div>✅ Data Privacy Protected</div>
+    <div>✅ Transparent Process</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
   <h2>Contact Us</h2>
-  <p>📞 8979382308</p>
-  <p>📧 dreamoverseascareerarchitects@gmail.com</p>
+  <p>📞 WhatsApp: <a href="https://wa.me/918979382308">8979382308</a></p>
+  <p>📧 Email: dreamoverseascareerarchitects@gmail.com</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2025 Dream Overseas Career Architects. All Rights Reserved.
+  © 2025 Dream Overseas Career Architects · All Rights Reserved
 </footer>
 
 <!-- PAYMENT MODAL -->
-<div class="modal" id="paymentModal">
+<div id="paymentModal" class="modal">
   <div class="modal-box">
-    <h3>Secure Crypto Payment</h3>
+    <span class="close" onclick="closePayment()">×</span>
+    <h3>Secure Payment Options</h3>
 
-    <div class="qr-grid">
+    <div class="payment-grid">
       <div>
         <h4>USDT (ERC20)</h4>
         <img src="images/usdt-erc20.png">
         <p>0xF4a2123cb34D9cc99Ac6eCCE532Fb359EF187c6f</p>
       </div>
-
       <div>
-        <h4>USDT (BNB Chain)</h4>
+        <h4>USDT (BNB)</h4>
         <img src="images/usdt-bnb.png">
         <p>0x7f1bb42b1f53d8d11caa2a2602fbd95b7b0f47fb</p>
       </div>
-
       <div>
-        <h4>BNB (BNB Chain)</h4>
+        <h4>BNB</h4>
         <img src="images/bnb.png">
         <p>0x7f1bb42b1f53d8d11caa2a2602fbd95b7b0f47fb</p>
       </div>
     </div>
 
-    <div class="close">
-      <button onclick="closePayment()">Close</button>
-    </div>
+    <p class="note">After payment, please confirm on WhatsApp.</p>
   </div>
 </div>
 
-<script>
-function openPayment(){
-  document.getElementById('paymentModal').style.display='flex';
-}
-function closePayment(){
-  document.getElementById('paymentModal').style.display='none';
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
