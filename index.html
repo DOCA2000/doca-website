@@ -2,135 +2,128 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dream Overseas Career Architects</title>
+<title>DOCA – Dream Overseas Career Architects</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{margin:0;font-family:Arial;background:#f4f9ff}
+header{background:#0b3c5d;color:#fff;padding:15px;display:flex;justify-content:space-between;align-items:center}
+header img{height:40px}
+header a{color:#fff;margin-left:15px;text-decoration:none}
+
+.hero{text-align:center;padding:100px 20px;background:#eaf6ff;position:relative;overflow:hidden}
+.airplane{position:absolute;bottom:20px;left:-200px;width:150px;animation:fly 12s linear infinite}
+.eagle{position:absolute;top:40px;right:-150px;width:120px;animation:fly2 10s linear infinite}
+@keyframes fly{to{left:110%}}
+@keyframes fly2{to{right:110%}}
+
+.section{text-align:center;padding:40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+
+button{padding:10px 18px;border:none;border-radius:5px;background:#0b3c5d;color:#fff}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 22px;border-radius:30px;text-decoration:none}
+
+.chatbot{position:fixed;bottom:20px;left:20px;background:#0b3c5d;color:#fff;padding:12px;border-radius:50%}
+.botBox{display:none;position:fixed;bottom:80px;left:20px;background:#fff;padding:15px;border:1px solid #ccc}
+
+#loginBox,#dashboard{display:none}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="logo-area">
-    <img src="images/logo.png" alt="DOCA Logo">
-    <span>Dream Overseas Career Architects</span>
+<header>
+  <img src="images/logo.png">
+  <div>
+    <a href="#" onclick="showHome()">Home</a>
+    <a href="#" onclick="showLogin()">Client Login</a>
+    <a href="https://wa.me/918979382308">WhatsApp</a>
   </div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-    <button onclick="openPayment()">Pay Fee</button>
-  </nav>
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <img src="images/airplane.png" class="plane">
-  <img src="images/eagle.png" class="eagle">
-  <h1>Fly Your Career Beyond Borders</h1>
-  <p>Trusted Overseas Career & Immigration Consultancy</p>
-  <div class="hero-btns">
-    <a href="https://wa.me/918979382308" target="_blank">WhatsApp Us</a>
-    <button onclick="openPayment()">Pay Registration Fee</button>
-  </div>
-</section>
+<!-- HOME -->
+<div id="home">
+  <section class="hero">
+    <h1>Dream Overseas Career Architects</h1>
+    <p>Visa • Passport • Work Permit • Career Guidance</p>
+    <img src="images/airplane.png" class="airplane">
+    <img src="images/eagle.png" class="eagle">
+  </section>
 
-<!-- BRAND STORY -->
-<section id="about" class="section light">
-  <h2>Who We Are</h2>
-  <p class="center">
-    Dream Overseas Career Architects is a professional overseas consultancy
-    focused on building genuine global career opportunities with transparency,
-    verified processes and responsible guidance.
-  </p>
-</section>
-
-<!-- TRUST STATS -->
-<section class="stats">
-  <div><span>1000+</span><p>Candidates Guided</p></div>
-  <div><span>15+</span><p>Countries</p></div>
-  <div><span>95%</span><p>Success Rate</p></div>
-  <div><span>24×7</span><p>Support</p></div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div>✈️ Aviation Jobs</div>
-    <div>🌍 Overseas Employment</div>
-    <div>🛂 Work Visa Assistance</div>
-    <div>📄 Passport Services</div>
-    <div>🎓 Career Guidance</div>
-    <div>📑 Documentation Support</div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="section light">
-  <h2>Our Process</h2>
-  <div class="timeline">
-    <div>1. Online Registration</div>
-    <div>2. Profile Verification</div>
-    <div>3. Interview Scheduling</div>
-    <div>4. Documentation</div>
-    <div>5. Job Offer & Departure</div>
-  </div>
-</section>
-
-<!-- CERTIFICATION -->
-<section class="section">
-  <h2>Why Trust Us</h2>
-  <div class="cards">
-    <div>✅ Secure Payment System</div>
-    <div>✅ Verified Consultants</div>
-    <div>✅ Data Privacy Protected</div>
-    <div>✅ Transparent Process</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>📞 WhatsApp: <a href="https://wa.me/918979382308">8979382308</a></p>
-  <p>📧 Email: dreamoverseascareerarchitects@gmail.com</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2025 Dream Overseas Career Architects · All Rights Reserved
-</footer>
-
-<!-- PAYMENT MODAL -->
-<div id="paymentModal" class="modal">
-  <div class="modal-box">
-    <span class="close" onclick="closePayment()">×</span>
-    <h3>Secure Payment Options</h3>
-
-    <div class="payment-grid">
-      <div>
-        <h4>USDT (ERC20)</h4>
-        <img src="images/usdt-erc20.png">
-        <p>0xF4a2123cb34D9cc99Ac6eCCE532Fb359EF187c6f</p>
-      </div>
-      <div>
-        <h4>USDT (BNB)</h4>
-        <img src="images/usdt-bnb.png">
-        <p>0x7f1bb42b1f53d8d11caa2a2602fbd95b7b0f47fb</p>
-      </div>
-      <div>
-        <h4>BNB</h4>
-        <img src="images/bnb.png">
-        <p>0x7f1bb42b1f53d8d11caa2a2602fbd95b7b0f47fb</p>
-      </div>
+  <section class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">Passport Assistance</div>
+      <div class="card">Work / Tourist Visa</div>
+      <div class="card">Job Guidance</div>
+      <div class="card">Travel Support</div>
     </div>
+  </section>
 
-    <p class="note">After payment, please confirm on WhatsApp.</p>
-  </div>
+  <section class="section">
+    <h2>Countries We Serve</h2>
+    <p style="font-size:22px">🇨🇦 🇦🇺 🇬🇧 🇺🇸 🇩🇪 🇦🇪 🇸🇬</p>
+  </section>
+
+  <section class="section">
+    <h2>Contact</h2>
+    <p>📞 WhatsApp: 8979382308</p>
+    <p>📧 dreamoverseascareerarchitects@gmail.com</p>
+  </section>
 </div>
 
-<script src="script.js"></script>
+<!-- LOGIN -->
+<div id="loginBox" class="section">
+  <h2>Client Login</h2>
+  <input id="cid" placeholder="Client ID"><br><br>
+  <input id="pass" type="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
+  <p>Demo ID: <b>client123</b> | Pass: <b>1234</b></p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="section">
+  <h2>Application Status</h2>
+  <p><b>Client:</b> Demo User</p>
+  <p><b>Status:</b> Under Embassy Review</p>
+  <p><b>Last Update:</b> Processing</p>
+  <button onclick="showHome()">Back to Home</button>
+</div>
+
+<a href="https://wa.me/918979382308" class="whatsapp">WhatsApp</a>
+
+<div class="chatbot" onclick="toggleBot()">🤖</div>
+<div class="botBox" id="botBox">
+  <p><b>Bot:</b> How can I help?</p>
+  <button onclick="alert('Please WhatsApp us')">Visa</button>
+  <button onclick="alert('Please WhatsApp us')">Passport</button>
+</div>
+
+<script>
+function showLogin(){
+  home.style.display='none';
+  loginBox.style.display='block';
+  dashboard.style.display='none';
+}
+function showHome(){
+  home.style.display='block';
+  loginBox.style.display='none';
+  dashboard.style.display='none';
+}
+function login(){
+  if(cid.value==='client123' && pass.value==='1234'){
+    loginBox.style.display='none';
+    dashboard.style.display='block';
+  }else{
+    alert('Wrong login');
+  }
+}
+function toggleBot(){
+  botBox.style.display='block';
+}
+</script>
+
 </body>
 </html>
