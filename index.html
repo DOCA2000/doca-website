@@ -4,88 +4,182 @@
   <meta charset="UTF-8">
   <title>DOCA – Dream Overseas Career Architects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f1a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: rgba(0,0,0,0.7);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(120deg, #020024, #090979, #00d4ff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Flying airplane */
+    .airplane {
+      position: absolute;
+      top: 60%;
+      left: -200px;
+      width: 180px;
+      animation: fly 12s linear infinite;
+    }
+
+    @keyframes fly {
+      0% { left: -200px; top: 65%; }
+      50% { top: 40%; }
+      100% { left: 110%; top: 20%; }
+    }
+
+    section {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #11162a;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,212,255,0.2);
+    }
+
+    .card img {
+      width: 70px;
+      margin-bottom: 15px;
+    }
+
+    .eagle {
+      width: 120px;
+      animation: eagleFly 6s ease-in-out infinite;
+    }
+
+    @keyframes eagleFly {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    footer {
+      background: #000;
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="header">
-  <img src="images/logo.png" class="logo">
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.png" alt="DOCA Logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-<section id="home" class="hero">
-  <h1>Dream Overseas Career Architects</h1>
-  <p>Passport • Visa • Work Permit • Job Assistance</p>
-
-  <img src="images/airplane.png" class="airplane">
-  <img src="images/eagle.png" class="eagle">
-</section>
-
-<section class="stats">
-  <div><span class="count" data-target="500">0</span>+ Clients</div>
-  <div><span class="count" data-target="1200">0</span>+ Visas</div>
-  <div><span class="count" data-target="15">0</span>+ Countries</div>
-</section>
-
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <p>
-    DOCA (Dream Overseas Career Architects) provides trusted overseas career
-    solutions with transparency and professional guidance.
-  </p>
-</section>
-
-<section id="services" class="section services">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">Passport Services</div>
-    <div class="card">Visa Assistance</div>
-    <div class="card">Work Permit</div>
-    <div class="card">Job Assistance Abroad</div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-
-  <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-<a href="https://wa.me/918979382308" class="whatsapp">WhatsApp</a>
-
-<script src="script.js"></script>
-</body><!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-bg"></div>
-
-  <div class="hero-content">
-    <h1 class="hero-title">
-      We Build <span>Future-Ready</span><br />
-      Digital Experiences
-    </h1>
-
-    <p class="hero-subtitle">
-      Growth • Innovation • Technology • Success
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#services" class="btn primary">Our Services</a>
-      <a href="#contact" class="btn secondary">Contact Us</a>
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>Dream Your Overseas Career</h1>
+      <p>Visa • Immigration • Work Permit • Study Abroad • Global Opportunities</p>
     </div>
+
+    <img src="images/airplane.jpg" class="airplane" alt="Flying Airplane">
   </div>
 
-  <!-- Flying Elements -->
-  <img src="images/airplane.png" class="airplane" />
-  <img src="images/eagle.png" class="eagle" />
-</section>
+  <!-- SERVICES -->
+  <section>
+    <h2>Our Services</h2>
+
+    <div class="services">
+      <div class="card">
+        <img src="images/passport.jpg">
+        <h3>Visa Assistance</h3>
+        <p>Tourist, Work & Study Visa Experts</p>
+      </div>
+
+      <div class="card">
+        <img src="images/flight.jpg">
+        <h3>Flight Deals</h3>
+        <p>Best International Airfare Support</p>
+      </div>
+
+      <div class="card">
+        <img src="images/night.window.jpg">
+        <h3>Global Exposure</h3>
+        <p>Worldwide Career Opportunities</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EAGLE / GROWTH -->
+  <section>
+    <h2>Grow Beyond Borders</h2>
+    <img src="images/eagle.jpg" class="eagle">
+    <p>We help you rise higher with trusted overseas solutions.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 DOCA | Dream Overseas Career Architects
+  </footer>
+
+</body>
 </html>
