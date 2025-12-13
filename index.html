@@ -1,185 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DOCA – Dream Overseas Career Architects</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Dream Overseas Career Architects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<style>
+:root{
+  --saffron:#ff9933;
+  --white:#ffffff;
+  --green:#138808;
+  --dark:#0b1c2d;
+  --blue:#0a3d62;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0f1a;
-      color: #fff;
-      overflow-x: hidden;
-    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 40px;
-      background: rgba(0,0,0,0.7);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-    }
+body{
+  background:#f5f7fa;
+  color:#222;
+}
 
-    header img {
-      height: 45px;
-    }
+/* HEADER */
+header{
+  background:linear-gradient(90deg,var(--saffron),var(--white),var(--green));
+  padding:15px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+header h1{
+  color:#000;
+  font-size:22px;
+  font-weight:800;
+}
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(120deg, #020024, #090979, #00d4ff);
-      position: relative;
-      overflow: hidden;
-    }
+/* HERO */
+.hero{
+  background:linear-gradient(120deg,#0b1c2d,#0a3d62);
+  color:white;
+  padding:80px 20px;
+  text-align:center;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
-    }
+.hero h2{
+  font-size:36px;
+  margin-bottom:15px;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
+.hero p{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+  opacity:.95;
+}
 
-    /* Flying airplane */
-    .airplane {
-      position: absolute;
-      top: 60%;
-      left: -200px;
-      width: 180px;
-      animation: fly 12s linear infinite;
-    }
+.hero button{
+  margin-top:30px;
+  padding:15px 35px;
+  font-size:18px;
+  background:var(--saffron);
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:bold;
+}
 
-    @keyframes fly {
-      0% { left: -200px; top: 65%; }
-      50% { top: 40%; }
-      100% { left: 110%; top: 20%; }
-    }
+/* SECTIONS */
+section{
+  padding:60px 20px;
+  max-width:1200px;
+  margin:auto;
+}
 
-    section {
-      padding: 80px 40px;
-      text-align: center;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
+.card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
-    .card {
-      background: #11162a;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,212,255,0.2);
-    }
+/* CERTIFIED */
+.cert{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:15px;
+  font-weight:bold;
+}
 
-    .card img {
-      width: 70px;
-      margin-bottom: 15px;
-    }
+/* CONTACT */
+.contact{
+  background:#0b1c2d;
+  color:white;
+  text-align:center;
+}
 
-    .eagle {
-      width: 120px;
-      animation: eagleFly 6s ease-in-out infinite;
-    }
+/* FOOTER */
+footer{
+  background:#000;
+  color:#aaa;
+  text-align:center;
+  padding:20px;
+}
 
-    @keyframes eagleFly {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
+/* PAYMENT MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.8);
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
 
-    footer {
-      background: #000;
-      padding: 30px;
-      text-align: center;
-      font-size: 14px;
-    }
-  </style>
+.modal-box{
+  background:white;
+  padding:25px;
+  max-width:900px;
+  width:95%;
+  border-radius:20px;
+}
+
+.modal-box h3{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.qr-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  text-align:center;
+}
+
+.qr-grid img{
+  width:100%;
+  max-width:200px;
+}
+
+.close{
+  text-align:center;
+  margin-top:20px;
+}
+
+.close button{
+  padding:10px 25px;
+  background:red;
+  color:white;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="images/logo.png" alt="DOCA Logo">
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>Dream Overseas Career Architects</h1>
+</header>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h1>Dream Your Overseas Career</h1>
-      <p>Visa • Immigration • Work Permit • Study Abroad • Global Opportunities</p>
-    </div>
+<div class="hero">
+  <h2>Fly Your Career Beyond Borders ✈️</h2>
+  <p>Trusted overseas education & career consultancy with certified experts, secure process and global success vision.</p>
+  <button onclick="openPayment()">Pay Registration Fee</button>
+</div>
 
-    <img src="images/airplane.jpg" class="airplane" alt="Flying Airplane">
+<section>
+  <h2 style="text-align:center;margin-bottom:30px">Why Choose Us</h2>
+  <div class="grid">
+    <div class="card">✈️ Aviation Inspired Career Growth</div>
+    <div class="card">🌍 Global Universities & Countries</div>
+    <div class="card">📑 100% Transparent Documentation</div>
+    <div class="card">🛡️ Secure & Verified Payment System</div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <section>
-    <h2>Our Services</h2>
+<section>
+  <h2 style="text-align:center;margin-bottom:30px">Certified & Trusted</h2>
+  <div class="grid">
+    <div class="card cert">✅ ISO Certified Process</div>
+    <div class="card cert">✅ Data Privacy Protection</div>
+    <div class="card cert">✅ Legal Documentation Support</div>
+    <div class="card cert">✅ Customer Support Verified</div>
+  </div>
+</section>
 
-    <div class="services">
-      <div class="card">
-        <img src="images/passport.jpg">
-        <h3>Visa Assistance</h3>
-        <p>Tourist, Work & Study Visa Experts</p>
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>📞 8979382308</p>
+  <p>📧 dreamoverseascareerarchitects@gmail.com</p>
+</section>
+
+<footer>
+  © 2025 Dream Overseas Career Architects. All Rights Reserved.
+</footer>
+
+<!-- PAYMENT MODAL -->
+<div class="modal" id="paymentModal">
+  <div class="modal-box">
+    <h3>Secure Crypto Payment</h3>
+
+    <div class="qr-grid">
+      <div>
+        <h4>USDT (ERC20)</h4>
+        <img src="images/usdt-erc20.png">
+        <p>0xF4a2123cb34D9cc99Ac6eCCE532Fb359EF187c6f</p>
       </div>
 
-      <div class="card">
-        <img src="images/flight.jpg">
-        <h3>Flight Deals</h3>
-        <p>Best International Airfare Support</p>
+      <div>
+        <h4>USDT (BNB Chain)</h4>
+        <img src="images/usdt-bnb.png">
+        <p>0x7f1bb42b1f53d8d11caa2a2602fbd95b7b0f47fb</p>
       </div>
 
-      <div class="card">
-        <img src="images/night.window.jpg">
-        <h3>Global Exposure</h3>
-        <p>Worldwide Career Opportunities</p>
+      <div>
+        <h4>BNB (BNB Chain)</h4>
+        <img src="images/bnb.png">
+        <p>0x7f1bb42b1f53d8d11caa2a2602fbd95b7b0f47fb</p>
       </div>
     </div>
-  </section>
 
-  <!-- EAGLE / GROWTH -->
-  <section>
-    <h2>Grow Beyond Borders</h2>
-    <img src="images/eagle.jpg" class="eagle">
-    <p>We help you rise higher with trusted overseas solutions.</p>
-  </section>
+    <div class="close">
+      <button onclick="closePayment()">Close</button>
+    </div>
+  </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 DOCA | Dream Overseas Career Architects
-  </footer>
+<script>
+function openPayment(){
+  document.getElementById('paymentModal').style.display='flex';
+}
+function closePayment(){
+  document.getElementById('paymentModal').style.display='none';
+}
+</script>
 
 </body>
 </html>
