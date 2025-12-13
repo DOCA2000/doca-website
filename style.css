@@ -1,105 +1,119 @@
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#e6f2ff,#ffffff);
+overflow-x:hidden;
 }
 
 .header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px;
-  background:#0b3c5d;
+background:#0b3c5d;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
 }
 
-.logo{height:40px}
+.logo{height:50px}
 
 nav a{
-  color:#fff;
-  margin-left:15px;
-  text-decoration:none;
+color:#fff;
+margin-left:15px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
-  text-align:center;
-  padding:120px 20px;
-  background:#eaf6ff;
-  position:relative;
-  overflow:hidden;
+height:100vh;
+text-align:center;
+padding-top:120px;
+position:relative;
+overflow:hidden;
 }
 
+.hero h1{font-size:36px;color:#0b3c5d}
+.hero p{font-size:18px}
+
 .airplane{
-  position:absolute;
-  bottom:20px;
-  left:-200px;
-  width:150px;
-  animation:fly 12s linear infinite;
+position:absolute;
+bottom:80px;
+left:-200px;
+width:180px;
+animation:plane 12s linear infinite;
 }
 
 .eagle{
-  position:absolute;
-  top:40px;
-  right:-150px;
-  width:120px;
-  animation:fly2 10s linear infinite;
+position:absolute;
+top:80px;
+right:-150px;
+width:130px;
+animation:eagle 10s linear infinite;
 }
 
-@keyframes fly{
-  to{left:110%}
+@keyframes plane{
+from{left:-200px}
+to{left:120%}
 }
-@keyframes fly2{
-  to{right:110%}
+
+@keyframes eagle{
+from{right:-150px}
+to{right:120%}
 }
 
 .section{
-  padding:40px;
-  text-align:center;
+padding:50px 20px;
+text-align:center;
 }
 
+.light{background:#f5f9ff}
+
 .cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
 }
 
 .card{
-  background:#f4f4f4;
-  padding:20px;
-  border-radius:8px;
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.faq-btn{
+width:100%;
+padding:15px;
+margin-top:10px;
+font-size:16px;
+border:none;
+background:#0b3c5d;
+color:#fff;
+cursor:pointer;
+}
+
+.faq-content{
+display:none;
+padding:15px;
+background:#fff;
+border:1px solid #ccc;
 }
 
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:12px 20px;
-  border-radius:30px;
-  text-decoration:none;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:14px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.center{
-  text-align:center;
-  padding:100px;
-}
-
-.chatbot{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#0b3c5d;
-  color:#fff;
-  padding:12px;
-  border-radius:50%;
-  cursor:pointer;
-}
-
-.botBox{
-  display:none;
-  position:fixed;
-  bottom:80px;
-  left:20px;
-  background:#fff;
-  padding:15px;
-  border:1px solid #ccc;
+footer{
+background:#0b3c5d;
+color:#fff;
+text-align:center;
+padding:15px;
 }
