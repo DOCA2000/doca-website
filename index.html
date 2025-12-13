@@ -4,126 +4,86 @@
 <meta charset="UTF-8">
 <title>DOCA – Dream Overseas Career Architects</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{margin:0;font-family:Arial;background:#f4f9ff}
-header{background:#0b3c5d;color:#fff;padding:15px;display:flex;justify-content:space-between;align-items:center}
-header img{height:40px}
-header a{color:#fff;margin-left:15px;text-decoration:none}
-
-.hero{text-align:center;padding:100px 20px;background:#eaf6ff;position:relative;overflow:hidden}
-.airplane{position:absolute;bottom:20px;left:-200px;width:150px;animation:fly 12s linear infinite}
-.eagle{position:absolute;top:40px;right:-150px;width:120px;animation:fly2 10s linear infinite}
-@keyframes fly{to{left:110%}}
-@keyframes fly2{to{right:110%}}
-
-.section{text-align:center;padding:40px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
-.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
-
-button{padding:10px 18px;border:none;border-radius:5px;background:#0b3c5d;color:#fff}
-
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 22px;border-radius:30px;text-decoration:none}
-
-.chatbot{position:fixed;bottom:20px;left:20px;background:#0b3c5d;color:#fff;padding:12px;border-radius:50%}
-.botBox{display:none;position:fixed;bottom:80px;left:20px;background:#fff;padding:15px;border:1px solid #ccc}
-
-#loginBox,#dashboard{display:none}
-</style>
+<meta name="description" content="Genuine Visa & Passport Assistance">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <img src="images/logo.png">
-  <div>
-    <a href="#" onclick="showHome()">Home</a>
-    <a href="#" onclick="showLogin()">Client Login</a>
-    <a href="https://wa.me/918979382308">WhatsApp</a>
-  </div>
+<header class="header">
+  <img src="images/logo.png" class="logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Departments</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- HOME -->
-<div id="home">
-  <section class="hero">
-    <h1>Dream Overseas Career Architects</h1>
-    <p>Visa • Passport • Work Permit • Career Guidance</p>
-    <img src="images/airplane.png" class="airplane">
-    <img src="images/eagle.png" class="eagle">
-  </section>
+<section id="home" class="hero">
+  <h1>Dream Overseas Career Architects</h1>
+  <p>Passport • Visa • Work Permit • Career Guidance</p>
 
-  <section class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">Passport Assistance</div>
-      <div class="card">Work / Tourist Visa</div>
-      <div class="card">Job Guidance</div>
-      <div class="card">Travel Support</div>
-    </div>
-  </section>
+  <img src="images/airplane.png" class="airplane">
+  <img src="images/eagle.png" class="eagle">
+</section>
 
-  <section class="section">
-    <h2>Countries We Serve</h2>
-    <p style="font-size:22px">🇨🇦 🇦🇺 🇬🇧 🇺🇸 🇩🇪 🇦🇪 🇸🇬</p>
-  </section>
+<section id="services" class="section">
+  <h2>Our Departments</h2>
+  <div class="cards">
+    <div class="card">📘 Passport Department</div>
+    <div class="card">✈️ Tourist Visa Department</div>
+    <div class="card">💼 Work Visa Department</div>
+    <div class="card">🎓 Study Visa Department</div>
+    <div class="card">🧳 Travel Assistance</div>
+  </div>
+</section>
 
-  <section class="section">
-    <h2>Contact</h2>
-    <p>📞 WhatsApp: 8979382308</p>
-    <p>📧 dreamoverseascareerarchitects@gmail.com</p>
-  </section>
-</div>
+<section id="process" class="section light">
+  <h2>How Our System Works</h2>
+  <div class="cards">
+    <div class="card">1️⃣ Profile Check</div>
+    <div class="card">2️⃣ Documentation</div>
+    <div class="card">3️⃣ Application Filing</div>
+    <div class="card">4️⃣ Embassy Review</div>
+    <div class="card">5️⃣ Decision</div>
+    <div class="card">6️⃣ Travel Guidance</div>
+  </div>
+</section>
 
-<!-- LOGIN -->
-<div id="loginBox" class="section">
-  <h2>Client Login</h2>
-  <input id="cid" placeholder="Client ID"><br><br>
-  <input id="pass" type="password" placeholder="Password"><br><br>
-  <button onclick="login()">Login</button>
-  <p>Demo ID: <b>client123</b> | Pass: <b>1234</b></p>
-</div>
+<section class="section">
+  <h2>Countries We Serve</h2>
+  <p>🇨🇦 Canada • 🇬🇧 UK • 🇦🇺 Australia • 🇩🇪 Germany • 🇫🇷 France • 🇦🇪 UAE • 🇸🇬 Singapore</p>
+</section>
 
-<!-- DASHBOARD -->
-<div id="dashboard" class="section">
-  <h2>Application Status</h2>
-  <p><b>Client:</b> Demo User</p>
-  <p><b>Status:</b> Under Embassy Review</p>
-  <p><b>Last Update:</b> Processing</p>
-  <button onclick="showHome()">Back to Home</button>
-</div>
+<section id="faq" class="section light">
+  <h2>Frequently Asked Questions</h2>
+
+  <button class="faq-btn">Is visa guaranteed?</button>
+  <div class="faq-content">No. We follow embassy rules only.</div>
+
+  <button class="faq-btn">Do you provide fake documents?</button>
+  <div class="faq-content">No. We strictly avoid illegal activities.</div>
+
+  <button class="faq-btn">How long does processing take?</button>
+  <div class="faq-content">Depends on country and visa type.</div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>
+    📞 <a href="https://wa.me/918979382308">WhatsApp: 8979382308</a><br>
+    📧 dreamoverseascareerarchitects@gmail.com
+  </p>
+</section>
 
 <a href="https://wa.me/918979382308" class="whatsapp">WhatsApp</a>
 
-<div class="chatbot" onclick="toggleBot()">🤖</div>
-<div class="botBox" id="botBox">
-  <p><b>Bot:</b> How can I help?</p>
-  <button onclick="alert('Please WhatsApp us')">Visa</button>
-  <button onclick="alert('Please WhatsApp us')">Passport</button>
-</div>
+<footer>
+  © 2025 DOCA – Dream Overseas Career Architects
+</footer>
 
-<script>
-function showLogin(){
-  home.style.display='none';
-  loginBox.style.display='block';
-  dashboard.style.display='none';
-}
-function showHome(){
-  home.style.display='block';
-  loginBox.style.display='none';
-  dashboard.style.display='none';
-}
-function login(){
-  if(cid.value==='client123' && pass.value==='1234'){
-    loginBox.style.display='none';
-    dashboard.style.display='block';
-  }else{
-    alert('Wrong login');
-  }
-}
-function toggleBot(){
-  botBox.style.display='block';
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
