@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DOCA Dreams | Overseas Career Architects</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>DOCA – Dream Overseas Career Architects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">
-      <img src="images/logo.png" alt="DOCA Dreams Logo" />
-      <span>DOCA DREAMS</span>
-    </div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header class="header">
+  <img src="images/logo.png" class="logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <img src="images/airplane.png" class="airplane" />
-    <img src="images/eagle.png" class="eagle" />
+<section id="home" class="hero">
+  <h1>Dream Overseas Career Architects</h1>
+  <p>Passport • Visa • Work Permit • Job Assistance</p>
 
-    <h1>Dream Overseas Career Architects</h1>
-    <p>Passport • Visa • Work Permit • Job Assistance</p>
+  <img src="images/airplane.png" class="airplane">
+  <img src="images/eagle.png" class="eagle">
+</section>
 
-    <a class="cta" href="https://wa.me/918979382308" target="_blank">WhatsApp Now</a>
-  </section>
+<section class="stats">
+  <div><span class="count" data-target="500">0</span>+ Clients</div>
+  <div><span class="count" data-target="1200">0</span>+ Visas</div>
+  <div><span class="count" data-target="15">0</span>+ Countries</div>
+</section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="about">
-    <h2>About Us</h2>
-    <p>
-      DOCA (Dream Overseas Career Architects) helps you build a successful
-      overseas career with trust, transparency, and professional guidance.
-    </p>
-  </section>
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>
+    DOCA (Dream Overseas Career Architects) provides trusted overseas career
+    solutions with transparency and professional guidance.
+  </p>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 DOCA Dreams. All Rights Reserved.</p>
-  </footer>
+<section id="services" class="section services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Passport Services</div>
+    <div class="card">Visa Assistance</div>
+    <div class="card">Work Permit</div>
+    <div class="card">Job Assistance Abroad</div>
+  </div>
+</section>
 
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+
+  <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<a href="https://wa.me/918979382308" class="whatsapp">WhatsApp</a>
+
+<script src="script.js"></script>
 </body>
 </html>
