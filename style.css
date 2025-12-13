@@ -108,3 +108,127 @@ form button {
   border-radius: 25px;
   text-decoration: none;
 }
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(120deg, #020024, #090979, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 40%);
+  animation: bgMove 20s linear infinite;
+}
+
+@keyframes bgMove {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-50%,-50%); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.hero-title span {
+  color: #00eaff;
+}
+
+.hero-subtitle {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeUp 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeUp 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+.btn {
+  padding: 14px 32px;
+  margin: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #00eaff;
+  color: #000;
+}
+
+.btn.primary:hover {
+  box-shadow: 0 0 25px #00eaff;
+}
+
+.btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Flying Airplane */
+.airplane {
+  position: absolute;
+  width: 180px;
+  top: 60%;
+  left: -200px;
+  animation: planeFly 18s linear infinite;
+}
+
+@keyframes planeFly {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(140vw) translateY(-200px); }
+}
+
+/* Flying Eagle */
+.eagle {
+  position: absolute;
+  width: 120px;
+  top: 20%;
+  right: -150px;
+  animation: eagleFly 15s linear infinite;
+}
+
+@keyframes eagleFly {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-140vw); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
