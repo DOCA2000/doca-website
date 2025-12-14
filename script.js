@@ -1,8 +1,6 @@
-const buttons = document.querySelectorAll(".faq-btn");
-buttons.forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const content = btn.nextElementSibling;
-    content.style.display =
-      content.style.display === "block" ? "none" : "block";
-  });
+document.querySelectorAll(".faq-btn").forEach(btn=>{
+  btn.onclick = () => {
+    const box = btn.nextElementSibling;
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  };
 });
