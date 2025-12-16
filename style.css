@@ -1,127 +1,35 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;font-family:Arial;background:#000;color:#fff;overflow-x:hidden}
+header{text-align:center;padding:20px;background:#0b3c5d}
+.hero{text-align:center;padding:60px;background:rgba(0,0,0,.5)}
+.btn{background:#25D366;color:#fff;padding:12px 20px;border-radius:25px;text-decoration:none}
+.departments{padding:60px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.card{background:#0b3c5d;padding:25px;border-radius:12px}
+.lead{text-align:center;padding:50px}
+.lead input{padding:10px;width:250px;margin:6px;border-radius:8px;border:none}
+.lead button{padding:10px 20px;border:none;border-radius:20px;background:#ff9800;color:#000}
+footer{text-align:center;padding:20px;background:#0b3c5d}
 
-body{background:#f4f9ff;color:#222}
+/* SKY */
+.sky{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:linear-gradient(#001,#004)}
+.stars{width:100%;height:100%;background:url('https://i.imgur.com/8KQ7z5N.png');animation:twinkle 5s infinite}
+@keyframes twinkle{0%,100%{opacity:1}50%{opacity:.6}}
 
-/* HEADER */
-.header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#0b3c5d;
-  color:#fff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 20px;
-  z-index:1000;
-}
+.cloud{position:absolute;background:rgba(255,255,255,.2);border-radius:50px}
+.cloud1{width:200px;height:60px;top:20%;animation:cloudMove 60s linear infinite}
+.cloud2{width:300px;height:80px;top:40%;animation:cloudMove 90s linear infinite}
+@keyframes cloudMove{from{left:-300px}to{left:110%}}
 
-.brand{display:flex;align-items:center;gap:10px}
-.logo{height:42px}
+.airplane{position:absolute;width:180px;top:60%;left:-200px;animation:planeFly 20s linear infinite}
+@keyframes planeFly{to{left:120%}}
 
-nav a{
-  color:#fff;
-  margin-left:18px;
-  text-decoration:none;
-  font-weight:500;
-}
+.bird{position:absolute;width:90px;animation:birdFly 15s linear infinite}
+.b1{top:30%;left:-100px}
+.b2{top:45%;left:-200px;animation-delay:5s}
+.b3{top:20%;left:-300px;animation-delay:8s}
+@keyframes birdFly{to{left:120%}}
 
-/* HERO */
-.hero{
-  height:100vh;
-  background:linear-gradient(120deg,#dff3ff,#ffffff);
-  padding-top:120px;
-  position:relative;
-  overflow:hidden;
-}
+.shooting-star{position:absolute;width:120px;height:2px;background:white;top:10%;left:-200px;animation:shoot 8s infinite}
+@keyframes shoot{0%{opacity:0}30%{opacity:1;transform:translateX(120vw)}100%{opacity:0}}
 
-.hero-content{
-  max-width:650px;
-  padding:40px;
-}
-
-.hero h1{font-size:40px;margin-bottom:10px}
-.hero p{font-size:18px;margin-bottom:20px}
-
-.btn{
-  display:inline-block;
-  background:#0b3c5d;
-  color:#fff;
-  padding:12px 20px;
-  margin-right:10px;
-  border-radius:6px;
-  text-decoration:none;
-}
-
-.whatsapp{background:#25D366}
-
-/* ANIMATIONS */
-.airplane{
-  position:absolute;
-  bottom:60px;
-  left:-250px;
-  width:220px;
-  animation:planeFly 18s linear infinite;
-}
-
-.bird{
-  position:absolute;
-  top:120px;
-  right:-120px;
-  width:120px;
-  animation:birdFly 10s linear infinite, wing 0.6s ease-in-out infinite alternate;
-}
-
-@keyframes planeFly{
-  from{left:-250px}
-  to{left:110%}
-}
-
-@keyframes birdFly{
-  from{right:-120px}
-  to{right:110%}
-}
-
-@keyframes wing{
-  from{transform:rotate(2deg)}
-  to{transform:rotate(-2deg)}
-}
-
-/* SECTIONS */
-.section{padding:70px 20px;text-align:center}
-.section.dark{background:#0b3c5d;color:#fff}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  max-width:1000px;
-  margin:30px auto;
-}
-
-.card{
-  background:#fff;
-  padding:25px;
-  border-radius:12px;
-  font-weight:bold;
-  transition:.3s;
-}
-
-.section.dark .card{color:#000}
-
-.card:hover{transform:translateY(-8px)}
-
-.steps{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-  max-width:900px;
-  margin:30px auto;
-}
-
-footer{
-  background:#06263b;
-  color:#fff;
-  text-align:center;
-  padding:18px;
-}
+.toggle{position:fixed;bottom:20px;left:20px;padding:10px;border-radius:50%;border:none}
