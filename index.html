@@ -1,90 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>DOCA – Dream Overseas Career Architects</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Visa, Passport & Overseas Career Guidance">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>DOCA – Dream Overseas Career Architects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="header">
-  <div class="brand">
-    <img src="images/logo.png" class="logo">
-    <span>DOCA</span>
-  </div>
+<div class="sky" id="sky">
+  <div class="stars"></div>
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#departments">Departments</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <img src="airplane.png" class="airplane">
+  <img src="bird.png" class="bird b1">
+  <img src="bird.png" class="bird b2">
+  <img src="bird.png" class="bird b3">
+
+  <div class="shooting-star"></div>
+</div>
+
+<header>
+  <h1>DOCA</h1>
+  <p>Dream Overseas Career Architects</p>
 </header>
 
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Dream Overseas Career Architects</h1>
-    <p>Passport • Visa • Study • Work • Overseas Guidance</p>
-
-    <a href="#departments" class="btn">Explore Services</a>
-    <a href="https://wa.me/918979382308" class="btn whatsapp">WhatsApp</a>
-  </div>
-
-  <!-- Flying Animations -->
-  <img src="images/airplane.png" class="airplane">
-  <img src="images/bird.png" class="bird">
+<section class="hero">
+  <h2>Your Overseas Journey Starts Here</h2>
+  <p>Passport • Visa • Work • Study</p>
+  <a class="btn" href="https://wa.me/918979382308">WhatsApp Us</a>
 </section>
 
-<section id="departments" class="section">
+<section class="departments">
   <h2>Our Departments</h2>
-
-  <div class="cards">
-    <div class="card">🌍 Passport Services</div>
-    <div class="card">✈️ Tourist Visa</div>
-    <div class="card">🎓 Study Visa</div>
-    <div class="card">💼 Work Visa</div>
-    <div class="card">🏢 Gulf Jobs</div>
-    <div class="card">🇪🇺 Europe Opportunities</div>
+  <div class="grid">
+    <div class="card">Passport Services</div>
+    <div class="card">Work Visa</div>
+    <div class="card">Study Visa</div>
+    <div class="card">Tourist Visa</div>
+    <div class="card">Gulf Jobs</div>
+    <div class="card">Europe Opportunities</div>
   </div>
 </section>
 
-<section id="process" class="section dark">
-  <h2>Our Genuine Process</h2>
-
-  <div class="steps">
-    <div>1️⃣ Profile Review</div>
-    <div>2️⃣ Document Guidance</div>
-    <div>3️⃣ Application Support</div>
-    <div>4️⃣ Embassy Rules Follow</div>
-    <div>5️⃣ Status Updates</div>
-    <div>6️⃣ Travel Preparation</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Who Can Apply</h2>
-  <p>10th / 12th / Graduate / Skilled / Unskilled – All guidance provided as per country rules.</p>
-</section>
-
-<section id="contact" class="section dark">
-  <h2>Contact & Lead Support</h2>
-
-  <p>
-    📞 WhatsApp: <b>+91 8979382308</b><br>
-    📧 Email: dreamoverseascareerarchitects@gmail.com
-  </p>
-
-  <a href="https://wa.me/918979382308" class="btn whatsapp big">
-    Chat on WhatsApp
-  </a>
+<section class="lead">
+  <h2>Get Free Consultation</h2>
+  <form onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="service" placeholder="Service Required" required>
+    <button type="submit">Send on WhatsApp</button>
+  </form>
 </section>
 
 <footer>
-  © 2025 DOCA – Dream Overseas Career Architects
+  <p>© 2025 DOCA – Genuine Overseas Guidance</p>
 </footer>
+
+<button class="toggle" onclick="toggleSky()">🌙 / ☀️</button>
 
 <script src="script.js"></script>
 </body>
