@@ -1,1 +1,114 @@
 
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  color: #222;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b3c5d;
+  color: white;
+  padding: 15px 20px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-area img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #0b3c5d, #1f6fa8);
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #ff9800;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gray {
+  background: #eef2f7;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form select, form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+}
+
+form button {
+  background: #0b3c5d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25d366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background: #0b3c5d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
