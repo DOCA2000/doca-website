@@ -1,121 +1,180 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(180deg,#dbefff,#ffffff);
+  font-family:Segoe UI,Arial,sans-serif;
+  background:linear-gradient(135deg,#0a2540,#0b3c5d,#0a2540);
+  color:#111;
   overflow-x:hidden;
 }
 
-/* HEADER */
 .header{
-  background:#0b3c5d;
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#0a2540cc;
+  backdrop-filter:blur(10px);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 20px;
-}
-.logo{height:50px}
-nav a{
-  color:#fff;
-  margin-left:15px;
-  text-decoration:none;
-  font-weight:bold;
+  padding:14px 22px;
+  z-index:1000;
 }
 
-/* HERO */
+.brand{
+  font-size:22px;
+  font-weight:700;
+  color:#fff;
+}
+
+nav a{
+  color:#fff;
+  margin-left:18px;
+  text-decoration:none;
+  font-weight:500;
+}
+
 .hero{
   height:100vh;
-  text-align:center;
   padding-top:120px;
+  text-align:center;
+  color:#fff;
   position:relative;
   overflow:hidden;
 }
-.hero h1{color:#0b3c5d;font-size:36px}
-.hero p{font-size:18px}
 
-/* PLANE & EAGLE – MOBILE SAFE */
+.hero h1{font-size:40px}
+.hero p{margin-top:10px;font-size:18px}
+
+.live-status{
+  margin-top:30px;
+  font-weight:600;
+}
+
+/* ✈️ AIRPLANE */
 .airplane{
   position:absolute;
-  bottom:40px;
-  left:-160px;
-  width:140px;
-  animation:planeFly 12s linear infinite;
-  z-index:5;
+  width:120px;
+  height:30px;
+  background:#fff;
+  border-radius:20px;
+  top:55%;
+  left:-150px;
+  animation:planeFly 18s linear infinite;
 }
-.eagle{
+.airplane::before{
+  content:"";
   position:absolute;
-  top:60px;
-  right:-140px;
-  width:110px;
-  animation:eagleFly 10s linear infinite;
-  z-index:6;
+  width:60px;
+  height:6px;
+  background:#fff;
+  top:-8px;
+  left:30px;
+}
+
+/* 🦅 BIRD */
+.bird{
+  position:absolute;
+  top:25%;
+  right:-120px;
+  width:80px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  animation:birdFly 14s linear infinite;
+}
+
+.bird .body{
+  width:20px;
+  height:14px;
+  background:#111;
+  border-radius:50%;
+}
+
+.bird .wing{
+  width:30px;
+  height:4px;
+  background:#111;
+  position:absolute;
+  animation:flap .6s ease-in-out infinite;
+}
+
+.wing.left{
+  left:-30px;
+  transform-origin:right center;
+}
+
+.wing.right{
+  right:-30px;
+  transform-origin:left center;
+}
+
+@keyframes flap{
+  0%,100%{transform:rotate(10deg)}
+  50%{transform:rotate(-25deg)}
 }
 
 @keyframes planeFly{
-  from{left:-160px}
-  to{left:100%}
+  from{left:-150px}
+  to{left:120%}
 }
-@keyframes eagleFly{
-  from{right:-140px}
-  to{right:100%}
+
+@keyframes birdFly{
+  from{right:-120px}
+  to{right:120%}
 }
 
 /* SECTIONS */
 .section{
-  padding:50px 20px;
+  padding:80px 20px;
+  background:#f5f7fa;
   text-align:center;
 }
-.light{background:#f3f8ff}
+
+.section.dark{
+  background:#0b3c5d;
+  color:#fff;
+}
 
 .cards{
+  margin-top:40px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
-  max-width:900px;
-  margin:auto;
 }
+
 .card{
+  padding:22px;
   background:#fff;
-  padding:25px;
   border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  font-weight:500;
+  transition:.3s;
 }
 
-/* FAQ */
-.faq-btn{
-  width:100%;
-  padding:15px;
-  margin-top:10px;
-  background:#0b3c5d;
+.dark .card{
+  background:#0a2540;
   color:#fff;
-  border:none;
-  cursor:pointer;
-  font-size:16px;
-}
-.faq-content{
-  display:none;
-  padding:15px;
-  background:#fff;
-  border:1px solid #ccc;
 }
 
-/* WHATSAPP */
+.card:hover{
+  transform:translateY(-8px);
+}
+
+/* WhatsApp */
 .whatsapp{
   position:fixed;
-  bottom:20px;
   right:20px;
+  bottom:20px;
   background:#25D366;
   color:#fff;
   padding:14px 22px;
   border-radius:30px;
   text-decoration:none;
-  font-weight:bold;
-  z-index:999;
+  font-weight:600;
 }
 
-/* FOOTER */
 footer{
-  background:#0b3c5d;
+  background:#0a2540;
   color:#fff;
   text-align:center;
-  padding:15px;
+  padding:20px;
 }
