@@ -1,7 +1,10 @@
-const toggle=document.getElementById('toggle');
+const toggle = document.getElementById("toggleMode");
 
-toggle.onclick=()=>{
- document.body.classList.toggle('day');
- document.body.classList.toggle('night');
- toggle.textContent=document.body.classList.contains('day')?'☀️':'🌙';
-}
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("night");
+  toggle.innerText = document.body.classList.contains("night")
+    ? "☀️ Day"
+    : "🌙 Night";
+});
+
+console.log("DOCA Next-Level Website Loaded");
