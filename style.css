@@ -1,30 +1,23 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:Segoe UI,Arial,sans-serif;
-  background:linear-gradient(135deg,#0a2540,#0b3c5d,#0a2540);
-  color:#111;
-  overflow-x:hidden;
-}
+body{background:#f4f9ff;color:#222}
 
+/* HEADER */
 .header{
   position:fixed;
   top:0;
   width:100%;
-  background:#0a2540cc;
-  backdrop-filter:blur(10px);
+  background:#0b3c5d;
+  color:#fff;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 22px;
+  padding:12px 20px;
   z-index:1000;
 }
 
-.brand{
-  font-size:22px;
-  font-weight:700;
-  color:#fff;
-}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{height:42px}
 
 nav a{
   color:#fff;
@@ -33,148 +26,102 @@ nav a{
   font-weight:500;
 }
 
+/* HERO */
 .hero{
   height:100vh;
+  background:linear-gradient(120deg,#dff3ff,#ffffff);
   padding-top:120px;
-  text-align:center;
-  color:#fff;
   position:relative;
   overflow:hidden;
 }
 
-.hero h1{font-size:40px}
-.hero p{margin-top:10px;font-size:18px}
-
-.live-status{
-  margin-top:30px;
-  font-weight:600;
+.hero-content{
+  max-width:650px;
+  padding:40px;
 }
 
-/* ✈️ AIRPLANE */
+.hero h1{font-size:40px;margin-bottom:10px}
+.hero p{font-size:18px;margin-bottom:20px}
+
+.btn{
+  display:inline-block;
+  background:#0b3c5d;
+  color:#fff;
+  padding:12px 20px;
+  margin-right:10px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.whatsapp{background:#25D366}
+
+/* ANIMATIONS */
 .airplane{
   position:absolute;
-  width:120px;
-  height:30px;
-  background:#fff;
-  border-radius:20px;
-  top:55%;
-  left:-150px;
+  bottom:60px;
+  left:-250px;
+  width:220px;
   animation:planeFly 18s linear infinite;
 }
-.airplane::before{
-  content:"";
-  position:absolute;
-  width:60px;
-  height:6px;
-  background:#fff;
-  top:-8px;
-  left:30px;
-}
 
-/* 🦅 BIRD */
 .bird{
   position:absolute;
-  top:25%;
+  top:120px;
   right:-120px;
-  width:80px;
-  height:40px;
-  display:flex;
-  align-items:center;
-  animation:birdFly 14s linear infinite;
-}
-
-.bird .body{
-  width:20px;
-  height:14px;
-  background:#111;
-  border-radius:50%;
-}
-
-.bird .wing{
-  width:30px;
-  height:4px;
-  background:#111;
-  position:absolute;
-  animation:flap .6s ease-in-out infinite;
-}
-
-.wing.left{
-  left:-30px;
-  transform-origin:right center;
-}
-
-.wing.right{
-  right:-30px;
-  transform-origin:left center;
-}
-
-@keyframes flap{
-  0%,100%{transform:rotate(10deg)}
-  50%{transform:rotate(-25deg)}
+  width:120px;
+  animation:birdFly 10s linear infinite, wing 0.6s ease-in-out infinite alternate;
 }
 
 @keyframes planeFly{
-  from{left:-150px}
-  to{left:120%}
+  from{left:-250px}
+  to{left:110%}
 }
 
 @keyframes birdFly{
   from{right:-120px}
-  to{right:120%}
+  to{right:110%}
+}
+
+@keyframes wing{
+  from{transform:rotate(2deg)}
+  to{transform:rotate(-2deg)}
 }
 
 /* SECTIONS */
-.section{
-  padding:80px 20px;
-  background:#f5f7fa;
-  text-align:center;
-}
-
-.section.dark{
-  background:#0b3c5d;
-  color:#fff;
-}
+.section{padding:70px 20px;text-align:center}
+.section.dark{background:#0b3c5d;color:#fff}
 
 .cards{
-  margin-top:40px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
+  max-width:1000px;
+  margin:30px auto;
 }
 
 .card{
-  padding:22px;
   background:#fff;
-  border-radius:10px;
-  font-weight:500;
+  padding:25px;
+  border-radius:12px;
+  font-weight:bold;
   transition:.3s;
 }
 
-.dark .card{
-  background:#0a2540;
-  color:#fff;
-}
+.section.dark .card{color:#000}
 
-.card:hover{
-  transform:translateY(-8px);
-}
+.card:hover{transform:translateY(-8px)}
 
-/* WhatsApp */
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:#25D366;
-  color:#fff;
-  padding:14px 22px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  max-width:900px;
+  margin:30px auto;
 }
 
 footer{
-  background:#0a2540;
+  background:#06263b;
   color:#fff;
   text-align:center;
-  padding:20px;
+  padding:18px;
 }
